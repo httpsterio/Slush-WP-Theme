@@ -5,7 +5,7 @@
 				<?php dynamic_sidebar("Footer"); ?>
 			</div>
 			<div class="row">
-				<<div class="four columns">
+				<div class="four columns">
 					&copy; 2008-<?php echo date('Y'); ?> All rights reserved.
 					<br>
 					Made by <a href="http://alajarvela.net" class="author">Alajarvela</a>.
