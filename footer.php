@@ -1,11 +1,11 @@
 		</div><!-- End Main row -->
 		<br><br>
-		<div class="panel"><footer id="content-info" role="contentinfo">
+		<div class="twelve columns"><footer id="content-info" role="contentinfo">
 			<div class="row">
 				<?php dynamic_sidebar("Footer"); ?>
 			</div>
 			<div class="row">
-				<div class="four columns">
+				<<div class="four columns">
 					&copy; 2008-<?php echo date('Y'); ?> All rights reserved.
 					<br>
 					Made by <a href="http://alajarvela.net" class="author">Alajarvela</a>.
