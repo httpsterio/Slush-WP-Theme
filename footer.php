@@ -1,6 +1,6 @@
 		</div><!-- End Main row -->
 		<br><br>
-		<div class="twelve columns"><footer id="content-info" role="contentinfo">
+		<div class="twelve columns panel foot"><footer id="content-info" role="contentinfo">
 			<div class="row">
 				<?php dynamic_sidebar("Footer"); ?>
 			</div>

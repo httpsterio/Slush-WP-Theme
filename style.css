@@ -105,6 +105,10 @@ h3 { background: #FA4B00; color: white; display:inline-block; }
 .exerpt { background: #FA4B00; color: white; display:inline-block; }
 h4 { color:#FA4B00;}
 
+.foot {
+	background-image:url('images/bg1.png');
+}
+
 
 /* -------------------------------------------------- 
 
