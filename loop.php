@@ -23,9 +23,9 @@
 
 		<div class="entry-content">
 	<?php if (is_archive() || is_search()) : // Only display excerpts for archives and search ?>
-		<?php the_excerpt(); ?>
+		<?php the_content(); ?>
 	<?php else : ?>
-		<?php the_excerpt(); ?><a href="<?php the_permalink(); ?>"><h5 class="exerpt">Read the rest!</h5></a><br>
+		<?php the_content(); ?><br>
 	<?php endif; ?>
 		</div>
 		<footer>
