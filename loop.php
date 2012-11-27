@@ -15,16 +15,17 @@
 			<?php custom_entry_meta(); ?> -->
 		</header>
 
-		<?php if ( has_post_thumbnail()) : ?>
+		<!--<?php if ( has_post_thumbnail()) : ?>
    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
    </a>
- <?php endif; ?>
+ <?php endif; ?>-->
 
 
 		<div class="entry-content">
 	<?php if (is_archive() || is_search()) : // Only display excerpts for archives and search ?>
 		<?php the_content(); ?>
 	<?php else : ?>
+		<img src ="http://localhost/wp/wp-content/uploads/2012/10/arcprew-e1350408053134.jpg">
 		<?php the_content(); ?><br>
 	<?php endif; ?>
 		</div>
