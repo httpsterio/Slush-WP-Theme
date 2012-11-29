@@ -11,28 +11,28 @@
 	<div class="panel"><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header>
 			<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></h2></a><h5 class="date"><?php title_meta(); ?></h5>
-			<!-- <?php $tag = get_the_tags(); if (!$tag) { } else { ?><p><?php the_tags(); ?></p><?php } ?>
-			<?php custom_entry_meta(); ?> -->
+
+
 		</header>
 
-		<!--<?php if ( has_post_thumbnail()) : ?>
+<?php if ( has_post_thumbnail()) : ?>
    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+   <?php the_post_thumbnail(); ?>
    </a>
- <?php endif; ?>-->
+ <?php endif; ?>
 
 
 		<div class="entry-content">
 	<?php if (is_archive() || is_search()) : // Only display excerpts for archives and search ?>
 		<?php the_content(); ?>
 	<?php else : ?>
-		<img src ="http://localhost/wp/wp-content/uploads/2012/10/arcprew-e1350408053134.jpg">
-		<?php the_content(); ?><br>
+
 	<?php endif; ?>
-		</div>
+	<h5><?php $tag = get_the_tags(); if (!$tag) { } else { ?><?php the_tags(); ?><?php } ?></h5>
+		</div></div>
 		<footer>
 		</footer>
-		</div>
-	</article>
+	</article>	
 <?php endwhile; // End the loop ?>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>

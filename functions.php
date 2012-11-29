@@ -114,37 +114,19 @@ foreach ($sidebars as $sidebar) {
 		'after_title' => '</strong></h6>'
 	));
 }
-
-// return entry meta information for posts, used by multiple loops.
-function reverie_entry_meta() {
-	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('Posted on %s at %s.', 'reverie'), get_the_time('l, F jS, Y'), get_the_time()) .'</time>';
-	echo '<p class="byline author vcard">'. __('Written by', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .'</a></p>';
-}
-
 // return custom meta 2 information for posts.
 function title_meta() {
 	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('%s ', 'reverie'), get_the_time('d/M/Y'), get_the_time()) .'</time>';
 }
 
-// return custom meta information for posts.
-function custom_entry_meta() {
-	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('<i>Posted on %s .</i>', 'reverie'), get_the_time('M j, Y'), get_the_time()) .'</time>';
-	echo '<p class="byline author vcard">'. __('<i>Written by</i>', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .'</a></p>';
+function reverie_entry_meta() {
+	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('%s ', 'reverie'), get_the_time('d/M/Y'), get_the_time()) .'</time>';
 }
-
-// Remove the more jump link
-function remove_more_jump_link($link) { 
-$offset = strpos($link, '#more-');
-if ($offset) {
-$end = strpos($link, '"',$offset);
-}
-if ($end) {
-$link = substr_replace($link, '', $offset, $end-$offset);
-}
-return $link;
-}
-add_filter('the_content_more_link', 'remove_more_jump_link');
-
+// return entry meta information for posts, used by multiple loops.
+/*-function reverie_entry_meta() {
+	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('Posted on %s at %s.', 'reverie'), get_the_time('l, F jS, Y'), get_the_time()) .'</time>';
+	echo '<p class="byline author vcard">'. __('Written by', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .'</a></p>';
+}*/
 
 /* Customized the output of caption, you can remove the filter to restore back to the WP default output. Courtesy of DevPress. http://devpress.com/blog/captions-in-wordpress/ */
 add_filter( 'img_caption_shortcode', 'cleaner_caption', 10, 3 );
@@ -263,7 +245,6 @@ function reverie_pagination() {
 		echo '</div><!--// end .pagination -->';
 	}
 }
-
 
 // Presstrends
 function presstrends() {

@@ -1,6 +1,6 @@
 		</div><!-- End Main row -->
-		<br><br>
-		<div class="twelve columns panel foot"><footer id="content-info" role="contentinfo">
+		
+		<div class="foot"><footer id="content-info" role="contentinfo">
 			<div class="row">
 				<?php dynamic_sidebar("Footer"); ?>
 			</div>
@@ -8,7 +8,7 @@
 				<div class="four columns">
 					&copy; 2008-<?php echo date('Y'); ?> All rights reserved.
 					<br>
-					Made by <a href="http://alajarvela.net" class="author">Alajarvela</a>.
+					Powered by <a href="http://themefortress.com/reverie/" title="Reverie Framework">Reverie Framework</a>.
 				</div>
 				<?php wp_nav_menu(array('theme_location' => 'utility_navigation', 'container' => false, 'menu_class' => 'eight columns footer-nav')); ?>
 			</div></div>

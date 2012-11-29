@@ -8,13 +8,13 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 
-	<title>Alajarvela - Blog</title>
+	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 	
 	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width" />
 				
 	<!-- Favicon and Feed -->
-	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 	
 	<!--  iPhone Web App Home Screen Icon -->
@@ -38,7 +38,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+	
 	<!-- Start the main container -->
 	<div id="container" class="container" role="document">
 		
@@ -46,12 +46,24 @@
 		<div class="row">
 			<header class="twelve columns" role="banner">
 				<div class="reverie-header">
-					<br ><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
-						<h1 class="titleheader fade">Alajarvela.net</h1></a>
+					<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
 					<h4 class="subheader"><?php bloginfo('description'); ?></h4>
 				</div>
 				<nav role="navigation">
-					
+					<?php
+					    wp_nav_menu( array(
+						'theme_location' => 'primary_navigation',
+						'container' =>false,
+						'menu_class' => '',
+						'echo' => true,
+						'before' => '',
+						'after' => '',
+						'link_before' => '',
+						'link_after' => '',
+						'depth' => 0,
+						'items_wrap' => '<ul class="nav-bar">%3$s</ul>',
+						'walker' => new reverie_walker())
+					); ?>
 				</nav>
 			</header>
 		</div>
