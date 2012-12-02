@@ -38,18 +38,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-	
 	<!-- Start the main container -->
 	<div id="container" class="container" role="document">
-		
-		<!-- Row for blog navigation -->
-		<div class="row">
-			<header class="twelve columns" role="banner">
-				<div class="reverie-header">
-					<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-					<h4 class="subheader"><?php bloginfo('description'); ?></h4>
-				</div>
-				<nav role="navigation">
+
+<div class="row">
+	<div class="twelve columns">	
+	
+						<nav role="navigation">
 					<?php
 					    wp_nav_menu( array(
 						'theme_location' => 'primary_navigation',
@@ -65,6 +60,16 @@
 						'walker' => new reverie_walker())
 					); ?>
 				</nav>
+				</div>
+</div>
+				
+		<!-- Row for blog navigation -->
+		<div class="row">
+			<header class="twelve columns" role="banner">
+				<div class="reverie-header">
+					<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+					<h4 class="subheader"><?php bloginfo('description'); ?></h4>
+				</div>
 			</header>
 		</div>
 		

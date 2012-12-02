@@ -5,9 +5,9 @@ Template Name: Contact form
 get_header(); ?>
 
 		<!-- Row for main content area -->
-		<div id="content" class="twelve columns panel" role="main">
+		<div id="content" class="twelve columns" role="main">
 	
-			<div class="post-box">
+			<div class="post-box panel">
 				<?php get_template_part('loop', 'page'); ?>
    
 
