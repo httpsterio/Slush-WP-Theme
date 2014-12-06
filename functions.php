@@ -1,7 +1,7 @@
 <?php
-function reverie_setup() {
-	// Add language supports. Please note that Reverie Framework does not include language files.
-	load_theme_textdomain('reverie', get_template_directory() . '/lang');
+function slush_setup() {
+	// Add language supports. Please note that slush Framework does not include language files.
+	load_theme_textdomain('slush', get_template_directory() . '/lang');
 	
 	// Add post thumbnail supports. http://codex.wordpress.org/Post_Thumbnails
 	add_theme_support('post-thumbnails');
@@ -13,15 +13,15 @@ function reverie_setup() {
 	// Add menu supports. http://codex.wordpress.org/Function_Reference/register_nav_menus
 	add_theme_support('menus');
 	register_nav_menus(array(
-		'primary_navigation' => __('Primary Navigation', 'reverie'),
-		'utility_navigation' => __('Utility Navigation', 'reverie')
+		'primary_navigation' => __('Primary Navigation', 'slush'),
+		'utility_navigation' => __('Utility Navigation', 'slush')
 	));	
 }
-add_action('after_setup_theme', 'reverie_setup');
+add_action('after_setup_theme', 'slush_setup');
 
 // Enqueue for header and footer, thanks to flickapix on Github.
 // Enqueue css files
-function reverie_css() {
+function slush_css() {
   if ( !is_admin() ) {
   
      wp_register_style( 'foundation',get_template_directory_uri() . '/css/foundation.css', false );
@@ -39,17 +39,17 @@ function reverie_css() {
      
   }
 }  
-add_action( 'init', 'reverie_css' );
+add_action( 'init', 'slush_css' );
 
-function reverie_ie_css () {
+function slush_ie_css () {
     echo '<!--[if lt IE 9]>';
     echo '<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie.css">';
     echo '<![endif]-->';
 }
-add_action( 'wp_head', 'reverie_ie_css' );
+add_action( 'wp_head', 'slush_ie_css' );
 
 // Enqueue js files
-function reverie_scripts() {
+function slush_scripts() {
 
 global $is_IE;
 
@@ -93,7 +93,7 @@ global $is_IE;
 		wp_enqueue_script('comment-reply');
   }
 }
-add_action( 'init', 'reverie_scripts' );
+add_action( 'init', 'slush_scripts' );
 
 // create widget areas: sidebar, footer
 $sidebars = array('Sidebar');
@@ -116,16 +116,16 @@ foreach ($sidebars as $sidebar) {
 }
 // return custom meta 2 information for posts.
 function title_meta() {
-	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('%s ', 'reverie'), get_the_time('d/M/Y'), get_the_time()) .'</time>';
+	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('%s ', 'slush'), get_the_time('d/M/Y'), get_the_time()) .'</time>';
 }
 
-function reverie_entry_meta() {
-	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('%s ', 'reverie'), get_the_time('d/M/Y'), get_the_time()) .'</time>';
+function slush_entry_meta() {
+	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('%s ', 'slush'), get_the_time('d/M/Y'), get_the_time()) .'</time>';
 }
 // return entry meta information for posts, used by multiple loops.
-/*-function reverie_entry_meta() {
-	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('Posted on %s at %s.', 'reverie'), get_the_time('l, F jS, Y'), get_the_time()) .'</time>';
-	echo '<p class="byline author vcard">'. __('Written by', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .'</a></p>';
+/*-function slush_entry_meta() {
+	echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('Posted on %s at %s.', 'slush'), get_the_time('l, F jS, Y'), get_the_time()) .'</time>';
+	echo '<p class="byline author vcard">'. __('Written by', 'slush') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .'</a></p>';
 }*/
 
 /* Customized the output of caption, you can remove the filter to restore back to the WP default output. Courtesy of DevPress. http://devpress.com/blog/captions-in-wordpress/ */
@@ -194,7 +194,7 @@ function image_tag($html, $id, $alt, $title) {
 add_filter('get_image_tag', 'image_tag', 0, 4);
 
 // Customize output for menu
-class reverie_walker extends Walker_Nav_Menu {
+class slush_walker extends Walker_Nav_Menu {
   function start_lvl(&$output, $depth) {
     $indent = str_repeat("\t", $depth);
     $output .= "\n$indent<a href=\"#\" class=\"flyout-toggle\"><span> </span></a><ul class=\"flyout\">\n";
@@ -202,7 +202,7 @@ class reverie_walker extends Walker_Nav_Menu {
 }
 
 // Add Foundation 'active' class for the current menu item 
-function reverie_active_nav_class( $classes, $item )
+function slush_active_nav_class( $classes, $item )
 {
     if($item->current == 1)
     {
@@ -210,7 +210,7 @@ function reverie_active_nav_class( $classes, $item )
     }
     return $classes;
 }
-add_filter( 'nav_menu_css_class', 'reverie_active_nav_class', 10, 2 );
+add_filter( 'nav_menu_css_class', 'slush_active_nav_class', 10, 2 );
 
 // img unautop, Courtesy of Interconnectit http://interconnectit.com/2175/how-to-remove-p-tags-from-images-in-wordpress/
 function img_unautop($pee) {
@@ -220,7 +220,7 @@ function img_unautop($pee) {
 add_filter( 'the_content', 'img_unautop', 30 );
 
 // Pagination
-function reverie_pagination() {
+function slush_pagination() {
 	global $wp_query;
  
 	$big = 999999999; // This needs to be an unlikely integer
@@ -240,7 +240,7 @@ function reverie_pagination() {
  
 	// Display the pagination if more than one page is found
 	if ( $paginate_links ) {
-		echo '<div class="reverie-pagination">';
+		echo '<div class="slush-pagination">';
 		echo $paginate_links;
 		echo '</div><!--// end .pagination -->';
 	}

@@ -4,11 +4,11 @@
 		<div class="row collapse">
 			
 			<div class="eight mobile-three columns">
-				<input type="text" value="" name="s" id="s" placeholder="<?php _e('Search', 'reverie'); ?>">
+				<input type="text" value="" name="s" id="s" placeholder="<?php _e('Search', 'slush'); ?>">
 			</div>
 			
 			<div class="four mobile-one columns">
-				<input type="submit" id="searchsubmit" value="<?php _e('Search', 'reverie'); ?>" class="postfix button">
+				<input type="submit" id="searchsubmit" value="<?php _e('Search', 'slush'); ?>" class="postfix button">
 			</div>
 		</div>
 	</div>

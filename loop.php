@@ -1,7 +1,7 @@
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
 <?php if (!have_posts()) : ?>
 	<div class="notice">
-		<p class="bottom"><?php _e('Sorry, no results were found.', 'reverie'); ?></p>
+		<p class="bottom"><?php _e('Sorry, no results were found.', 'slush'); ?></p>
 	</div>
 	<?php get_search_form(); ?>	
 <?php endif; ?>
@@ -36,9 +36,9 @@
 <?php endwhile; // End the loop ?>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
-<?php if ( function_exists('reverie_pagination') ) { reverie_pagination(); } else if ( is_paged() ) { ?>
+<?php if ( function_exists('slush_pagination') ) { slush_pagination(); } else if ( is_paged() ) { ?>
 <nav id="post-nav">
-	<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'reverie' ) ); ?></div>
-	<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'reverie' ) ); ?></div>
+	<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'slush' ) ); ?></div>
+	<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'slush' ) ); ?></div>
 </nav>
 <?php } ?>

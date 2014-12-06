@@ -6,11 +6,11 @@
 			<div class="post-box">
 				<h1>
 					<?php if (is_day()) : ?>
-						<?php printf(__('Daily Archives: %s', 'reverie'), get_the_date()); ?>
+						<?php printf(__('Daily Archives: %s', 'slush'), get_the_date()); ?>
 					<?php elseif (is_month()) : ?>
-						<?php printf(__('Monthly Archives: %s', 'reverie'), get_the_date('F Y')); ?>
+						<?php printf(__('Monthly Archives: %s', 'slush'), get_the_date('F Y')); ?>
 					<?php elseif (is_year()) : ?>
-						<?php printf(__('Yearly Archives: %s', 'reverie'), get_the_date('Y')); ?>
+						<?php printf(__('Yearly Archives: %s', 'slush'), get_the_date('Y')); ?>
 					<?php else : ?>
 						<?php single_cat_title(); ?>
 					<?php endif; ?>

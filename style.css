@@ -10,11 +10,10 @@ License:            MIT License
 License URI:        http://www.opensource.org/licenses/mit-license.php
 */
 
-/* MY STUFF */
 
 .foot {
-	background-image:url('images/bg1.png');
-	color:#555;
+	background-color: #252525;
+	color:white;
 }
 
 /*No Style for list elements */
@@ -98,20 +97,16 @@ h3 { background: #FA4B00; color: white; display:inline-block; }
 .exerpt { background: #FA4B00; color: white; display:inline-block; }
 h4 { color:#FA4B00;}
 
-.foot {
-	background-image:url('images/bg1.png');
-	color:#555;
-}
 
 /* ---------------------------------------------------
    Customized Adjustments of Foundation for WordPress
 --------------------------------------------------- */
  
 	/* Foundation-specific presentation CSS by ZURB */
-	div.reverie-header { margin: 0 0 20px 0; padding: 20px 0 0 0; border-bottom: solid 1px #ccc; }
-	div.reverie-header h1 { font-weight: 500; margin-bottom: 0; padding: 0; }
-	div.reverie-header h1 a { color: #181818; }
-	div.reverie-header h1 a:hover { color: #181818; }
+	div.slush-header { margin: 0 0 20px 0; padding: 20px 0 0 0; border-bottom: solid 1px #FA4B00; }
+	div.slush-header h1 { font-weight: 100; margin-bottom: 0; padding: 0; }
+	div.slush-header h1 a { color: #FA4B00; }
+	div.slush-header h1 a:hover { color: #2ba6cb; }
 	
 	@media handheld, only screen and (max-width: 767px) {
 	header { position: relative; }
