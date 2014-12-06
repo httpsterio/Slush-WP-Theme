@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Custom Template
+Template Name: Release Template
 */
 get_header(); ?>
 
@@ -9,6 +9,8 @@ get_header(); ?>
 	
 			<div class="post-box">
 				<?php get_template_part('loop', 'page'); ?>
+				<?php query_posts( 'post_type=releases'); ?>
+
 			</div>
 
 		</div><!-- End Content row -->
