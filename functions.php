@@ -1,4 +1,6 @@
 <?php
+
+
 function slush_setup() {
 	// Add language supports. Please note that slush Framework does not include language files.
 	load_theme_textdomain('slush', get_template_directory() . '/lang');
@@ -289,3 +291,4 @@ set_transient('presstrends_data', $data, 60*60*24);
 }}
 add_action('admin_init', 'presstrends');
 ?>
+
