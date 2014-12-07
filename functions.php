@@ -1,5 +1,10 @@
 <?php
 
+function is_post_type($type){
+    global $wp_query;
+    if($type == get_post_type($wp_query->post->ID)) return true;
+    return false;
+}
 
 function slush_setup() {
 	// Add language supports. Please note that slush Framework does not include language files.

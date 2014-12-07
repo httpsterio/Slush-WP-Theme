@@ -1,18 +1,13 @@
-<?php
-/*
-Template Name: Releases Template
-*/
-get_header(); ?>
+<?php get_header(); ?>
 
 		<!-- Row for main content area -->
 		<div id="content" class="eight columns" role="main">
-	
 			<div class="post-box">
-				<?php get_template_part('loop', 'page'); ?>
+				<?php get_template_part('loop', 'category'); ?>
 			</div>
+
 		</div><!-- End Content row -->
 		
 		<?php get_sidebar(); ?>
 		
-<?php get_footer(); ?>
 <?php get_footer(); ?>

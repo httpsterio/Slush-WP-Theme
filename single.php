@@ -5,8 +5,8 @@
 	
 			<div class="post-box">
 				<?php get_template_part('loop', 'single'); ?>
-			</div>
 
+			</div>
 		</div><!-- End Content row -->
 		
 		<?php get_sidebar(); ?>
