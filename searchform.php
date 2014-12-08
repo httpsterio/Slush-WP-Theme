@@ -8,7 +8,7 @@
 			</div>
 			
 			<div class="four mobile-one columns">
-				<input type="submit" id="searchsubmit" value="<?php _e('Search', 'slush'); ?>" class="postfix button">
+				<input type="submit" id="searchsubmit" value="<?php _e('Search', 'slush'); ?>" class="postfix button searchbutton">
 			</div>
 		</div>
 	</div>

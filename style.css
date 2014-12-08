@@ -93,6 +93,15 @@ a { color: #FA4B00; text-decoration: none; line-height: inherit;
 	color:white;
 }
 
+.searchbutton {
+	background-color: #FA4B00;
+	color: white;
+}
+.searchbutton:hover {
+	background-color: white;
+	color: #FA4B00;
+}
+
 h3 { background: #FA4B00; color: white; display:inline-block; }
 .exerpt { background: #FA4B00; color: white; display:inline-block; }
 h4 { color:#FA4B00;}
@@ -103,7 +112,7 @@ h4 { color:#FA4B00;}
 --------------------------------------------------- */
  
 	/* Foundation-specific presentation CSS by ZURB */
-	div.slush-header { margin: 0 0 20px 0; padding: 20px 0 0 0; border-bottom: solid 1px #FA4B00; }
+	div.slush-header { margin: 0 0 20px 0; padding: 20px 0 0 0; }
 	div.slush-header h1 { font-weight: 100; margin-bottom: 0; padding: 0; }
 	div.slush-header h1 a { color: #FA4B00; }
 	div.slush-header h1 a:hover { color: #2ba6cb; }
